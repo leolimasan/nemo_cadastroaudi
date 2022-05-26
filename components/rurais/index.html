@@ -1,0 +1,325 @@
+<link rel="stylesheet" href="components/rurais/css/bootstrap.min.css">
+<script src="components/rurais/js/bootstrap.min.js"></script>
+<div class="Modal" data-accordion="juridica">
+      <!-- Modal content -->
+      <div class="Modal-content">
+        <div class="form-success" style="display: none;">
+          <div class="wrapper">
+            <div class="row" style="padding-top:50px;">
+              <div class="col-xs-12 col-sm-10 col-sm-offset-1" style="text-align:center; font-size:30px;">
+                E-mail enviado com sucesso!
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="form-horizontal-pj" id="form-frotista" data-parsley-validate="" data-parsley-focus="none" novalidate="" data-id-site="20">
+          <div class="wrapper">
+            <div class="row">
+              <div class="text-center col-xs-12 col-sm-10 col-sm-offset-1">
+                <h1 class="hidden-xs AudiForm-title">Formulário para Produtores Rurais</h1>
+                <h4 class="visible-xs AudiForm-title">Formulário para Produtores Rurais</h4>
+              </div>
+              <!-- tipo-de-venda -->
+              <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <div class="form-group">
+                  <label for="input-tipo-venda" class="col-sm-4 control-label label-tipo-venda">Tipo de Venda*:</label>
+                  <div class="col-sm-6">
+                    <select id="input-tipo-venda" name="campo[tipo_venda]" class="form-control" data-parsley-required="true" aria-required="true">
+                      <option value="">Por favor selecione</option>
+                      <option value="rural" selected>Produtor Rural</option>
+                      <!-- <option value="company">Pessoa Jurídica (máximo 7 veículos)</option> -->
+                    </select>
+                    <label class="msg-error">*Campo obrigatório.</label>
+                  </div>
+                </div>
+              </div>
+              <!-- /tipo-de-venda -->
+              <!-- razao-social -->
+              <div class="company fleet col-xs-12 col-sm-10 col-sm-offset-1" style="display: none; opacity: 1;">
+                <div class="form-group">
+                  <label for="input-razao-social" class="col-sm-4 control-label">Razão Social*:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="input-razao-social" name="campo[razao_social]" placeholder="Razão Social" title="Razão Social" data-parsley-required="false" data-parsley-length="[]">
+                    <label class="msg-error">Preencha corretamente o campo Razão Social.</label>
+                  </div>
+                </div>
+              </div>
+              <!-- /razao-social -->
+              <!-- denominacao-rural -->
+              <div class="rural col-xs-12 col-sm-10 col-sm-offset-1" style="display: block; opacity: 1;">
+                <div class="form-group">
+                  <label for="input-rural-denomination" class="col-sm-4 control-label">Denominação Rural*:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="input-rural-denomination" name="campo[rural_denomination]" placeholder="Denominação Rural" data-parsley-required="true" data-parsley-length="[5, 65]" data-parsley-pattern="[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9\s]{5,65}">
+                    <label class="msg-error">Preencha corretamente o campo Denominação Rural.</label>
+                  </div>
+                </div>
+              </div>
+              <!-- /denominacao-rural -->
+              <!-- cnpj -->
+              <div class="company fleet col-xs-12 col-sm-10 col-sm-offset-1" style="display: none; opacity: 1;">
+                <div class="form-group">
+                  <label for="input-cnpj" class="col-sm-4 control-label">CNPJ*:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="cnpj" name="campo[cnpj]" placeholder="CNPJ" data-parsley-required="false">
+                    <label class="msg-error">Preencha corretamente o campo CNPJ.</label>
+                  </div>
+                </div>
+              </div>
+              <!-- /cnpj -->
+              <!-- ccir -->
+              <div class="rural col-xs-12 col-sm-10 col-sm-offset-1" style="display: block; opacity: 1;">
+                <div class="form-group">
+                  <label for="input-ccir" class="col-sm-4 control-label">CCIR*:</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" id="ccir" name="campo[ccir]" placeholder="CCIR" data-parsley-required="true" data-parsley-length="[11,11]">
+                    <label class="msg-error">Preencha corretamente o campo CCIR.</label>
+                  </div>
+                </div>
+              </div>
+              <!-- /ccir -->
+              <!-- title -->
+              <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <div class="form-group">
+                  <label for="input-title" class="col-sm-4 control-label">Forma de tratamento*:</label>
+                  <div class="col-sm-8">
+                    <div class="salutation"></div>
+                    <label class="msg-error">Preencha corretamente a forma de tratamento.</label>
+                  </div>
+                </div>
+              </div>
+              <!-- /title -->
+              <!-- pessoa-de-contato -->
+              <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <div class="form-group">
+                  <label for="input-nome-completo" class="col-sm-4 control-label">Pessoa de Contato*:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="input-nome-completo" name="campo[nome_completo]" placeholder="Nome completo" data-parsley-pattern="[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]{5,65}" data-parsley-length="[5, 65]" data-parsley-required="true" aria-required="true">
+                    <label class="msg-error">Preencha corretamente o campo nome.</label>
+                  </div>
+                </div>
+              </div>
+              <!-- /pessoa-de-contato -->
+              <!-- email -->
+              <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <div class="form-group">
+                  <label for="input-email" class="col-sm-4 control-label">Email*:</label>
+                  <div class="col-sm-8">
+                    <input type="email" class="form-control" id="input-email" name="campo[email]" placeholder="Email" data-parsley-pattern="[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]{0,}" data-parsley-required="true" aria-required="true">
+                    <label class="msg-error">Preencha corretamente o campo e-mail.</label>
+                  </div>
+                </div>
+              </div>
+              <!-- /email -->
+              <!-- contato -->
+              <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <div class="form-group">
+                  <label for="input-cel" class="col-xs-12 col-sm-4 control-label">DDD* , Celular*:</label>
+                  <div class="col-xs-4 col-sm-2">
+                    <input type="text" class="form-control field_ddd" id="input-ddd" maxlength="2" name="campo[ddd]" placeholder="DDD" data-parsley-required="true" aria-required="true">
+                  </div>
+                  <div class="col-xs-8 col-sm-6">
+                    <input type="text" class="form-control field_cel" id="input-cel" maxlength="10" name="campo[celular]" placeholder="Celular" data-parsley-required="true" aria-required="true">
+                  </div>
+                  <div class="col-sm-offset-4 col-sm-12" style="z-index: -100; height: 15px;">
+                    <label class="msg-error">Preencha corretamente os campos de contato.</label>
+                  </div>
+                </div>
+              </div>
+              <!-- /contato -->
+              <!-- estado -->
+              <div id="state" class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <div class="form-group">
+                  <label for="input-estado" class="col-xs-12 col-sm-4 control-label">Estado*:</label>
+                  <div class="col-xs-8 col-sm-5 col-lg-4 col-md-4">
+                    <select id="input-estado" name="campo[estado]" class="form-control" data-parsley-required="true" aria-required="true">
+                      <option value="">Por favor selecione</option>
+                    <option value="1">AC</option><option value="2">AL</option><option value="4">AP</option><option value="3">AM</option><option value="5">BA</option><option value="6">CE</option><option value="7">DF</option><option value="8">ES</option><option value="9">GO</option><option value="10">MA</option><option value="13">MT</option><option value="12">MS</option><option value="11">MG</option><option value="14">PA</option><option value="15">PB</option><option value="18">PR</option><option value="16">PE</option><option value="17">PI</option><option value="19">RJ</option><option value="20">RN</option><option value="23">RS</option><option value="21">RO</option><option value="22">RR</option><option value="24">SC</option><option value="26">SP</option><option value="25">SE</option><option value="27">TO</option></select>
+                    <label class="msg-error">*Campo obrigatório.</label>
+                  </div>
+                  <div class="loader col-xs- col-sm-1 col-md-1 col-lg-1" style="display: none;">
+                    <!--?xml version="1.0" encoding="utf-8"?-->
+                    <svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
+                      <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+                      <circle cx="50" cy="50" r="40" stroke="#e1e1e1" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+                      <circle cx="50" cy="50" r="40" stroke="#777777" fill="none" stroke-width="6" stroke-linecap="round">
+                        <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate>
+                        <animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="85.34 165.66;1 250;85.34 165.66"></animate>
+                      </circle>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- /estado -->
+              <!-- cidade -->
+              <div id="city" class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <div class="form-group">
+                  <label for="input-cidade" class="col-xs-12 col-sm-4 control-label">Cidade*:</label>
+                  <div class="col-xs-8 col-sm-5 col-lg-4 col-md-4">
+                    <select id="input-cidade" name="campo[cidade]" class="form-control" data-parsley-required="true" aria-required="true">
+                      <option value="">Por favor selecione</option>
+                    </select>
+                    <label class="msg-error">*Campo obrigatório.</label>
+                  </div>
+                  <div class="loader col-xs- col-sm-1 col-md-1 col-lg-1">
+                    <!--?xml version="1.0" encoding="utf-8"?-->
+                    <svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
+                      <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+                      <circle cx="50" cy="50" r="40" stroke="#e1e1e1" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+                      <circle cx="50" cy="50" r="40" stroke="#777777" fill="none" stroke-width="6" stroke-linecap="round">
+                        <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate>
+                        <animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="85.34 165.66;1 250;85.34 165.66"></animate>
+                      </circle>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- /cidade -->
+              <!-- dealer -->
+              <div class="rural dealer col-xs-12 col-sm-10 col-sm-offset-1" style="display: block; opacity: 1;">
+                <div class="dealer-wrapper form-group">
+                  <label for="input-dealer" class="col-xs-12 col-sm-4 control-label">Concessionária*:</label>
+                  <div class="col-xs-8 col-sm-5 col-lg-4 col-md-4">
+                    <select id="input-dealer" name="campo[dealer]" class="seller form-control" data-parsley-required="true">
+                      <option value="">Por favor selecione</option>
+                    <option value="25">AL - Audi Center Maceió</option><option value="26">AM - Audi Center Manaus</option><option value="36">BA - Audi Center Salvador</option><option value="17">CE - Audi Center Fortaleza</option><option value="8">DF - Audi Center Brasília</option><option value="45">ES - Audi Center Vitória</option><option value="18">GO - Audi Center Goiânia</option><option value="38">MA - Audi Center São Luis</option><option value="5">MG - Audi Center Belo Horizonte</option><option value="49">MG - Audi Center BH Pampulha </option><option value="22">MG - Audi Center Juiz de Fora</option><option value="43">MG - Audi Center Uberlândia</option><option value="10">MS - Audi Center Campo Grande</option><option value="14">MT - Audi Center Cuiabá</option><option value="4">PA - Audi Center Belém</option><option value="20">PB - Audi Center João Pessoa</option><option value="32">PE - Audi Center Recife</option><option value="42">PI - Audi Center Teresina</option><option value="11">PR - Audi Center Cascavel</option><option value="15">PR - Audi Center Curitiba</option><option value="24">PR - Audi Center Londrina</option><option value="27">PR - Audi Center Maringá</option><option value="7">RJ - Audi Center Botafogo</option><option value="34">RJ - Audi Center Rio de Janeiro</option><option value="29">RN - Audi Center Natal</option><option value="12">RS - Audi Center Caxias do Sul</option><option value="31">RS - Audi Center Porto Alegre</option><option value="6">SC - Audi Center Blumenau</option><option value="13">SC - Audi Center Criciúma</option><option value="16">SC - Audi Center Florianópolis</option><option value="21">SC - Audi Center Joinville</option><option value="2">SE - Audi Center Aracaju</option><option value="1">SP - Audi Center ABC</option><option value="51">SP - Audi Center Alphaville</option><option value="3">SP - Audi Center Bauru</option><option value="9">SP - Audi Center Campinas</option><option value="44">SP - Audi Center Itaim</option><option value="19">SP - Audi Center Jardins</option><option value="46">SP - Audi Center Jundiaí</option><option value="23">SP - Audi Center Lapa</option><option value="47">SP - Audi Center Mogi</option><option value="28">SP - Audi Center Morumbi</option><option value="30">SP - Audi Center Pinheiros</option><option value="33">SP - Audi Center Ribeirão Preto</option><option value="35">SP - Audi Center Rio Preto</option><option value="48">SP - Audi Center S.J dos Campos</option><option value="37">SP - Audi Center Santos</option><option value="39">SP - Audi Center Sorocaba</option><option value="40">SP - Audi Center SP Norte</option><option value="41">SP - Audi Center Tatuapé</option></select>
+                    <label class="msg-error">*Campo obrigatório.</label>
+                  </div>
+                  <div class="loader col-xs- col-sm-1 col-md-1 col-lg-1" style="display: none;">
+                    <!--?xml version="1.0" encoding="utf-8"?-->
+                    <svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
+                      <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+                      <circle cx="50" cy="50" r="40" stroke="#e1e1e1" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+                      <circle cx="50" cy="50" r="40" stroke="#777777" fill="none" stroke-width="6" stroke-linecap="round">
+                        <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate>
+                        <animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="85.34 165.66;1 250;85.34 165.66"></animate>
+                      </circle>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="rural dealer col-xs-12 col-sm-10 col-sm-offset-1" style="display: block; opacity: 1;">
+                <div class="dealerAditional-wrapper form-group" style="display: none;">
+                  <label for="input-dealerAdc" class="col-xs-12 col-sm-4 control-label">Concessionária adicional:</label>
+                  <div class="col-xs-8 col-sm-5 col-lg-4 col-md-4">
+                    <select id="input-dealerAdc" name="campo[dealer]" class="seller form-control">
+                      <option value="">Por favor selecione</option>
+                    </select>
+                    <label class="msg-error">*Campo obrigatório.</label>
+                  </div>
+                  <div class="loader col-xs- col-sm-1 col-md-1 col-lg-1">
+                    <!--?xml version="1.0" encoding="utf-8"?-->
+                    <svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
+                      <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+                      <circle cx="50" cy="50" r="40" stroke="#e1e1e1" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+                      <circle cx="50" cy="50" r="40" stroke="#777777" fill="none" stroke-width="6" stroke-linecap="round">
+                        <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate>
+                        <animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="85.34 165.66;1 250;85.34 165.66"></animate>
+                      </circle>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- /dealer -->
+              <!-- vehicles -->
+              <div class="rural vehicle col-xs-12 col-sm-10 col-sm-offset-1" style="display: block; opacity: 1;">
+                <div class="vehicle-model-wrapper form-group">
+                  <label for="input-vehicle" class="col-xs-12 col-sm-4 control-label">Escolha um modelo*:</label>
+                  <div class="col-xs-8 col-sm-5 col-lg-4 col-md-4">
+                    <select id="input-vehicle" name="campo[vehicle]" class="vehiclemodel form-control" data-parsley-required="true"><option value="">Por favor selecione</option><option value="1">A1</option><option value="2">A3</option><option value="4">A4</option><option value="6">A5</option><option value="7">A6</option><option value="9">A7</option><option value="10">A8</option><option value="11">Q3</option><option value="12">Q5</option><option value="13">Q7</option><option value="20">R8</option><option value="14">RS Q3</option><option value="15">RS3</option><option value="16">RS4</option><option value="17">RS5</option><option value="18">RS6</option><option value="19">RS7</option><option value="21">TT</option></select>
+                    <label class="msg-error">*Campo obrigatório.</label>
+                  </div>
+                  <div class="loader col-xs- col-sm-1 col-md-1 col-lg-1">
+                    <!--?xml version="1.0" encoding="utf-8"?-->
+                    <svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
+                      <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+                      <circle cx="50" cy="50" r="40" stroke="#e1e1e1" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+                      <circle cx="50" cy="50" r="40" stroke="#777777" fill="none" stroke-width="6" stroke-linecap="round">
+                        <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate>
+                        <animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="85.34 165.66;1 250;85.34 165.66"></animate>
+                      </circle>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rural vehicle col-xs-12 col-sm-10 col-sm-offset-1" style="display: block; opacity: 1;">
+                <div class="vehicleAditional-wrapper form-group" style="display: none;">
+                  <label for="input-vehicleAdc" class="col-xs-12 col-sm-4 control-label">Escolha um modelo adicional:</label>
+                  <div class="col-xs-8 col-sm-5 col-lg-4 col-md-4">
+                    <select id="input-vehicleAdc" name="campo[vehicle]" class="vehiclemodel form-control">
+                      <option value="">Por favor selecione</option>
+                    </select>
+                    <label class="msg-error">*Campo obrigatório.</label>
+                  </div>
+                  <div class="loader col-xs- col-sm-1 col-md-1 col-lg-1">
+                    <!--?xml version="1.0" encoding="utf-8"?-->
+                    <svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
+                      <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+                      <circle cx="50" cy="50" r="40" stroke="#e1e1e1" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+                      <circle cx="50" cy="50" r="40" stroke="#777777" fill="none" stroke-width="6" stroke-linecap="round">
+                        <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate>
+                        <animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="85.34 165.66;1 250;85.34 165.66"></animate>
+                      </circle>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- /dealer -->
+              <!-- interestModel -->
+              <div id="interestModel" class="form-vehicle-interest col-xs-12 col-sm-10 col-sm-offset-1" style="display: none;">
+                <div class="form-group">
+                  <label for="input-cidade" class="col-xs-12 col-sm-4 control-label">Modelo de interesse*, Qtd*:</label>
+                  <div class="vehicle-wrapper vehicleModels-manager__select col-xs-7 col-sm-5 col-lg-4 col-md-4">
+                    <select name="" class="form-control" id="vehicleModels-manager__select__model" data-parsley-required="false"><option value="">Por favor selecione</option><option value="1">A1</option><option value="2">A3</option><option value="4">A4</option><option value="6">A5</option><option value="7">A6</option><option value="9">A7</option><option value="10">A8</option><option value="11">Q3</option><option value="12">Q5</option><option value="13">Q7</option><option value="20">R8</option><option value="14">RS Q3</option><option value="15">RS3</option><option value="16">RS4</option><option value="17">RS5</option><option value="18">RS6</option><option value="19">RS7</option><option value="21">TT</option></select>
+                  </div>
+                  <div class="vehicleModels-manager__quantity col-xs-3 col-sm-1-5 col-lg-1-5 col-md-1-5 ">
+                    <input class="form-control " id="vehicleModels-manager__select__quantity" type="text" placeholder="0">
+                  </div>
+                  <div class="vehicleModels-manager__add col-xs-12 col-sm-12 col-lg-1 col-md-1">
+                    <a class="addBtn" href="javascript:void(0);" title="Adicionar modelo">+</a>
+                  </div>
+                  <div class="vehicle-wrapper col-xs-12 col-sm-offset-4 col-sm-12" style="z-index: -100; height: 15px;">
+                    <label class="msg-error">A quantidade mínima de veículos para frotista é oito</label>
+                  </div>
+                  <div class="vehicleModels-list col-xs-12 col-sm-8-5 col-sm-offset-4 col-lg-7 col-md-7 col-lg-offset-4 col-md-offset-4">
+                    <table class="vehicleModels-list__table col-xs-12 col-md-12 no-pad-left">
+                                        <!--thead> 
+                  <tr>
+                    <th class="col-md-7 no-pad-left">Modelo</th>
+                    <th class="col-md-3 no-pad-left">Quantidade</th>
+                    <th class="col-md-2 no-pad-left"></th>
+                  </tr>
+                </thead-->
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+            <div class="loader col-xs- col-sm-1 col-md-1 col-lg-1">
+              <!--?xml version="1.0" encoding="utf-8"?-->
+              <svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
+                <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+                <circle cx="50" cy="50" r="40" stroke="#e1e1e1" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+                <circle cx="50" cy="50" r="40" stroke="#777777" fill="none" stroke-width="6" stroke-linecap="round">
+                  <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate>
+                  <animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="85.34 165.66;1 250;85.34 165.66"></animate>
+                </circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- /interestModel -->
+        <!-- enviar -->
+        <div class="botoes">
+          <button type="button" class="btn-limpar" title="Limpar">Limpar</button>
+          <button type="submit" id="enviar" class="btn-enviar" title="Enviar" >Enviar</button>
+        </div>
+        <!-- /enviar -->
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+
+<script src="components/rurais/js/app-vendors.js"></script>
+<script src="components/rurais/js/app-main.js"></script>

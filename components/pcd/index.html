@@ -1,0 +1,157 @@
+<link rel="stylesheet" href="components/pcd/css/bootstrap.min.css">
+<script src="components/pcd/js/bootstrap.min.js"></script>
+<div class="Modal" data-accordion="fisica">
+  <div class="Modal-content">
+    <div class="form-success" style="display: none;">
+      <div class="wrapper">
+        <div class="row" style="padding-top:50px;">
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1" style="text-align:center; font-size:30px;">
+            E-mail enviado com sucesso!
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="form-horizontal-pf" data-parsley-validate="" data-parsley-focus="none" novalidate="" data-id-site="">
+      <div class="wrapper">
+        <div class="row">
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <h1 class="hidden-xs AudiForm-title text-left">Formulário de Vendas Corporativas</h1>
+            <h4 class="visible-xs AudiForm-title">Formulário de Vendas Corporativas</h4>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="form-group">
+              <label for="input-forma" class="col-sm-4 control-label">Forma de tratamento*:</label>
+              <div class="col-sm-4">
+                <div class="radio-custom">
+                  <input type="radio" name="salutation" class="salutation-sr" id="salutation-sr" value="Sr." checked="checked" data-parsley-multiple="salutation" data-parsley-id="5">
+                  <label for="salutation-sr">
+                    <div class="circle">
+                      <div class="inner-circle"></div>
+                    </div>Sr.
+                  </label>
+                </div>
+                <div class="radio-custom">
+                  <input type="radio" name="salutation" id="salutation-srs" value="Sra." data-parsley-multiple="salutation">
+                  <label for="salutation-srs">
+                    <div class="circle">
+                      <div class="inner-circle"></div>
+                    </div>Sra.
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="form-group">
+              <label for="input-nome" class="col-sm-4 control-label">Nome Completo*:</label>
+              <div class="col-sm-5 parsley-form-control">
+                <input type="text" class="form-control" id="input-nome" name="campo[nome]" placeholder="Nome Completo" data-parsley-required="true" data-parsley-pattern="[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]{5,65}" data-parsley-length="[5,65]" data-parsley-trigger="focusout blur" data-parsley-id="46"><ul class="parsley-errors-list" id="parsley-id-46"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="form-group">
+              <label for="input-cpf" class="col-sm-4 control-label">CPF*:</label>
+              <div class="col-sm-5 parsley-form-control">
+                <input type="text" class="form-control" id="cpf" name="campo[cpf]" placeholder="CPF" data-parsley-required="true" data-parsley-type="number" data-parsley-trigger="focusout blur" data-parsley-length="[11,11]" data-parsley-length-message="Este CPF é inválido." data-parsley-cpf="">
+              </div>
+              <label class="msg-error">Preencha corretamente o campo CNPJ.</label>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="form-group">
+              <label for="input-cel" class="col-xs-12 col-sm-4 control-label">Telefone*:</label>
+              <div class="col-xs-10 col-sm-5 parsley-form-control">
+                <input type="text" class="form-control" id="input-cel-pf" maxlength="15" name="campo[celular]" placeholder="Telefone" data-parsley-required="true" data-parsley-type="number" data-parsley-length="[10, 11]" data-parsley-trigger="focusout blur">
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="form-group">
+              <label for="input-email" class="col-xs-12 col-sm-4 control-label">Email*:</label>
+              <div class="col-xs-10 col-sm-5 parsley-form-control">
+                <input type="email" class="form-control" id="input-email-pf" name="campo[email]" placeholder="Email" data-parsley-required="true" data-parsley-trigger="focusout blur">
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="form-group">
+              <label for="input-data-nascimento" class="col-xs-12 col-sm-4 control-label">Data de nascimento*:</label>
+              <div class="col-xs-10 col-sm-5 parsley-form-control">
+                <input type="text" class="form-control" id="input-data-nascimento" name="campo[data-nascimento]" placeholder="Data de nascimento" data-parsley-required="true" data-parsley-trigger="focusout blur" data-parsley-trigger-after-failure="focusout" data-parsley-birthday="">
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="form-group">
+              <label for="input-estado" class="col-xs-12 col-sm-4 control-label">Estado*:</label>
+              <div class="col-xs-10 col-sm-5 parsley-form-control">
+                <select id="input-estado" name="campo[estado]" class="form-control" data-parsley-required="true" data-parsley-trigger="focusout blur"><option value="">Por favor selecione</option><option value="1" data-latitude="-9.582900" data-longitude="-67.483597">AC - Acre</option><option value="2" data-latitude="-9.395700" data-longitude="-35.440701">AL - Alagoas</option><option value="4" data-latitude="-0.022000" data-longitude="-51.035900">AP - Amapá</option><option value="3" data-latitude="-3.060700" data-longitude="-60.013000">AM - Amazonas</option><option value="5" data-latitude="-12.581600" data-longitude="-38.303902">BA - Bahia</option><option value="6" data-latitude="-3.430200" data-longitude="-38.323502">CE - Ceará</option><option value="7" data-latitude="-15.464700" data-longitude="-47.554699">DF - Distrito Federal</option><option value="8" data-latitude="-20.191000" data-longitude="-40.201599">ES - Espírito Santo</option><option value="9" data-latitude="-16.404301" data-longitude="-49.151402">GO - Goiás</option><option value="10" data-latitude="-2.314700" data-longitude="-44.181000">MA - Maranhão</option><option value="13" data-latitude="-15.354600" data-longitude="-56.054798">MT - Mato Grosso</option><option value="12" data-latitude="-20.263399" data-longitude="-54.384701">MS - Mato Grosso do Sul</option><option value="11" data-latitude="-19.551500" data-longitude="-43.561600">MG - Minas Gerais</option><option value="14" data-latitude="-1.272100" data-longitude="-48.301601">PA - Pará</option><option value="15" data-latitude="-7.065400" data-longitude="-34.514702">PB - Paraíba</option><option value="18" data-latitude="-25.254000" data-longitude="-49.162300">PR - Paraná</option><option value="16" data-latitude="-8.031400" data-longitude="-34.525200">PE - Pernambuco</option><option value="17" data-latitude="-5.052100" data-longitude="-42.480701">PI - Piauí</option><option value="19" data-latitude="-22.541000" data-longitude="-22.541000">RJ - Rio de Janeiro</option><option value="20" data-latitude="-5.474200" data-longitude="-35.123402">RN - Rio Grande do Norte</option><option value="23" data-latitude="-30.015900" data-longitude="-51.134800">RS - Rio Grande do Sul</option><option value="21" data-latitude="-8.454300" data-longitude="-63.541401">RO - Rondônia</option><option value="22" data-latitude="-2.491100" data-longitude="-60.402401">RR - Roraima</option><option value="24" data-latitude="-27.354799" data-longitude="-48.325699">SC - Santa Catarina</option><option value="26" data-latitude="-23.325100" data-longitude="-46.381001">SP - São Paulo</option><option value="25" data-latitude="-10.544000" data-longitude="-37.041801">SE - Sergipe</option><option value="27" data-latitude="-10.124600" data-longitude="-48.213699">TO - Tocantins</option></select>
+              </div>
+              <div class="loader col-xs- col-sm-1 col-md-1 col-lg-1" style="display: none;">
+                <!--?xml version="1.0" encoding="utf-8"?-->
+                <svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
+                  <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+                  <circle cx="50" cy="50" r="40" stroke="#e1e1e1" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+                  <circle cx="50" cy="50" r="40" stroke="#777777" fill="none" stroke-width="6" stroke-linecap="round">
+                    <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate>
+                    <animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="85.34 165.66;1 250;85.34 165.66"></animate>
+                  </circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="form-group">
+              <label for="input-cidade" class="col-xs-12 col-sm-4 control-label">Cidade*:</label>
+              <div class="col-xs-10 col-sm-5 parsley-form-control">
+                <select id="input-cidade" name="campo[cidade]" class="form-control" data-parsley-required="true" data-parsley-trigger="focusout blur" disabled=""><option value="">Por favor selecione</option></select>
+              </div>
+              <div class="loader col-xs- col-sm-1 col-md-1 col-lg-1">
+                <!--?xml version="1.0" encoding="utf-8"?-->
+                <svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
+                  <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+                  <circle cx="50" cy="50" r="40" stroke="#e1e1e1" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+                  <circle cx="50" cy="50" r="40" stroke="#777777" fill="none" stroke-width="6" stroke-linecap="round">
+                    <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate>
+                    <animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="85.34 165.66;1 250;85.34 165.66"></animate>
+                  </circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="form-group">
+              <label for="input-forma" class="col-sm-4 control-label">Deseja receber comunicações da Audi Brasil?*:</label>
+              <div class="col-sm-4">
+                <div class="radio-custom">
+                  <input type="radio" name="campo[receber]" id="receber-sim" value="Sim" checked="checked" data-parsley-multiple="camporeceber">
+                  <label for="receber-sim">
+                    <div class="circle">
+                      <div class="inner-circle"></div>
+                    </div>Sim
+                  </label>
+                </div>
+                <div class="radio-custom">
+                  <input type="radio" name="campo[receber]" id="receber-nao" value="Não" data-parsley-multiple="camporeceber">
+                  <label for="receber-nao">
+                    <div class="circle">
+                      <div class="inner-circle"></div>
+                    </div>Não
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="botoes">
+            <button type="button" class="btn-limpar" title="Limpar" onclick="ga('send', 'event', 'oportunidadeaudi', 'click', 'Oportunidade Audi: Desistiu de enviar o formulário');" deluminate_imagetype="png">Limpar</button>
+            <button type="submit" class="btn-enviar" title="Enviar" onclick="ga('send', 'event', 'oportunidadeaudi', 'click', 'Oportunidade Audi: Formulário enviado com sucesso');" deluminate_imagetype="png">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="components/pcd/js/app-vendors.js"></script>
+<script src="components/pcd/js/app-main.js"></script>

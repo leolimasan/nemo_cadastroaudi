@@ -1,0 +1,643 @@
+@font-face {
+  font-family: 'AudiTypeV03-Bold';
+  src: url("../fonts/AudiTypeV03-Bold.eot");
+  src: local("Ã”Ã¿â•‘"), url("../fonts/AudiTypeV03-Bold.woff") format("woff"), url("../fonts/AudiTypeV03-Bold.ttf") format("truetype"), url("../fonts/AudiTypeV03-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AudiTypeV03-ExtendedBold';
+  src: url("../fonts/AudiTypeV03-ExtendedBold.eot");
+  src: local("Ã”Ã¿â•‘"), url("../fonts/AudiTypeV03-ExtendedBold.woff") format("woff"), url("../fonts/AudiTypeV03-ExtendedBold.ttf") format("truetype"), url("../fonts/AudiTypeV03-ExtendedBold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AudiTypeV03-Normal';
+  src: url("../fonts/AudiTypeV03-Normal.eot");
+  src: local("Ã”Ã¿â•‘"), url("../fonts/AudiTypeV03-Normal.woff") format("woff"), url("../fonts/AudiTypeV03-Normal.ttf") format("truetype"), url("../fonts/AudiTypeV03-Normal.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+  font-family: '';
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.formLead {
+  display: table;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: 2;
+}
+.formLead .formLeadContent {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 390px;
+}
+.formLead .formLeadSuccess {
+  display: none;
+  margin: 0 auto;
+  padding: 40px 0;
+  vertical-align: middle;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  visibility: hidden;
+  width: 100%;
+}
+.formLead .formLeadSuccess .formLeadSuccessContainer .formLeadSuccessTitle {
+  color: #000;
+  display: block;
+  font-family: AudiTypeV03-Normal;
+  font-size: 16px;
+  font-style: normal;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.formLead .formLeadSuccess .formLeadSuccessContainer .formLeadSuccessTitle strong {
+  font-family: AudiTypeV03-Bold;
+  font-size: 21px;
+}
+.formLead .formLeadSuccess .formLeadSuccessContainer .formLeadSuccessBtnBack {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #ce213a;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-family: AudiTypeV03-Bold;
+  font-size: 27px;
+  height: 56px;
+  line-height: 55px;
+  margin: 10px auto;
+  text-align: center;
+  width: 175px;
+}
+.formLead .formLeadContainer {
+  margin-bottom: 80px;
+  width: 100%;
+  margin: 0 auto;
+}
+.formLead .formLeadContainer .formLeadTitle {
+  color: #000;
+  font-family: AudiTypeV03-Normal;
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.formLead .formGroup.hasError label {
+  color: #bc2037;
+}
+.formLead .formGroup.hasError label .labelIncorrect {
+  display: inline-block;
+  font-size: 13px;
+  position: absolute;
+  top: 77px;
+  right: 10px;
+}
+.formLead .event-lead {
+  display: none !important;
+}
+.formLead .formGroup {
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+}
+.formLead .formGroup .parsley-errors-list {
+  display: none;
+}
+.formLead .formGroup .loading {
+  height: 30px;
+  position: absolute;
+  right: -30px;
+  top: 41px;
+  width: 30px;
+}
+.formLead .formGroup.salutation {
+  color: #000;
+}
+.formLead .formGroup.salutation .salutation-title {
+  margin-top: 20px;
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.formLead .formGroup.vehiclemodel {
+  display: block;
+}
+.formLead .formGroup.seller,
+.formLead .formGroup.cpf,
+.formLead .formGroup.birthday {
+  display: none;
+}
+.formLead .formGroup.newsletter {
+  color: #000;
+}
+.formLead .formGroup.newsletter .newsletterCheckbox {
+  margin-top: 30px;
+  padding-left: 25px;
+  position: relative;
+  font-family: AudiTypeV03-Normal;
+  font-size: 12px;
+}
+.formLead .formGroup.newsletter .newsletterCheckbox a {
+  color: #000;
+  text-decoration: none;
+}
+.formLead .formGroup.newsletter .newsletterCheckbox span {
+  background-color: #ce213a;
+  display: inline-block;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: -2px;
+  width: 18px;
+}
+.formLead .formGroup.newsletter .newsletterCheckbox span i {
+  display: none;
+}
+.formLead .formGroup.newsletter .newsletterCheckbox.checked span i {
+  background-image: url("../images/form/assert_sprite_bg.png");
+  background-repeat: no-repeat;
+  display: block;
+  height: 8px;
+  left: 4px;
+  position: relative;
+  top: 5px;
+  width: 10px;
+}
+.formLead *:focus {
+  outline: none;
+}
+.formLead label {
+  font-family: AudiTypeV03-Normal;
+  color: #000;
+  display: block;
+  margin: 0 0 0 16px;
+  padding: 19px 0 10px;
+}
+.formLead label .labelTitle {
+  font-size: 10px;
+}
+.formLead label .labelIncorrect {
+  display: none;
+}
+.formLead input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 0;
+  color: #000;
+  font-family: AudiTypeV03-Normal;
+  font-size: 13px;
+  height: 22px;
+  margin-left: 9px;
+  margin-bottom: 4px;
+  max-width: 360px;
+  width: 90%;
+}
+.formLead select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff url("../images/form/arrow_select.png") 97% center no-repeat;
+  border: 0;
+  color: #000;
+  font-family: AudiTypeV03-Normal;
+  font-size: 13px;
+  height: 22px;
+  margin: 0 0 4px 16px;
+  width: 100%;
+  max-width: 360px;
+}
+.formLead .send {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #ce213a;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: AudiTypeV03-Bold;
+  font-size: 27px;
+  height: 56px;
+  line-height: 55px;
+  margin: 10px 0 40px 0;
+  width: 100%;
+}
+.formLead .radio-custom {
+  display: inline-block;
+}
+.formLead .radio-custom input[type="radio"] {
+  display: none;
+}
+.formLead .radio-custom input[type="radio"] + label {
+  padding-top: 0;
+  color: #000;
+  font-size: 12px;
+  cursor: pointer;
+}
+.formLead .radio-custom input[type="radio"] + label .circle {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #6f6f6f;
+  text-align: center;
+}
+.formLead .radio-custom input[type="radio"]:checked + label .inner-circle {
+  background-color: #ce213a;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  -moz-border-radius: 50%;
+  position: relative;
+  top: 4px;
+  border-radius: 50%;
+}
+@media (max-width: 500px) {
+  .formLead .formLeadContainer {
+    width: 90%;
+    max-width: 320px;
+  }
+  .formLead .formLeadContainer .formLeadTitle {
+    font-size: 19px;
+  }
+  .formLead .formLeadContainer .salutation {
+    border: none;
+  }
+  .formLead .formLeadContainer .interest {
+    border: none;
+  }
+  .formLead .formLeadContainer .newsletter {
+    margin-top: 80px;
+    border: none;
+  }
+  .formLead .formGroup {
+    background-image: none !important;
+    border-bottom: 1px solid #000;
+  }
+  .formLead .send {
+    margin: 40px 0;
+  }
+}
+.wrapper {
+  margin: 0;
+}
+.wrapper background-color #fff {
+  width: 100%;
+}
+.wrapper section {
+  position: relative;
+}
+.wrapper section .title {
+  font-size: 17px;
+}
+.wrapper section .title .gray-title {
+  color: #808080;
+  font-family: AudiTypeV03-ExtendedBold;
+  font-size: 18.57px;
+  margin-left: 24%;
+}
+.wrapper section .title .white-title {
+  color: #fff;
+  font-family: AudiTypeV03-ExtendedBold;
+  font-size: 27.86px;
+  margin-left: 32%;
+}
+.wrapper .description {
+  color: #fff;
+  font-family: AudiTypeV03-Normal;
+  font-size: 14px;
+  margin: 5% 2%;
+  text-align: center;
+  line-height: 17px;
+}
+/*   HEADER     */
+header .logo {
+  position: absolute;
+  margin: 10% 23%;
+}
+header .white-title h1 {
+  position: absolute;
+  font-size: 17px;
+  margin: 24% 0 0 5%;
+  color: #fff;
+  font-family: AudiTypeV03-ExtendedBold;
+}
+header .white-title h2 {
+  position: absolute;
+  font-size: 18px;
+  margin: 31% 0 0 5%;
+  color: #fff;
+  font-family: AudiTypeV03-Normal;
+}
+header .home {
+  width: 100%;
+}
+/*   VIRTUAL     */
+.virtual img {
+  margin-bottom: 5%;
+}
+.virtual .playIcon img {
+  position: absolute;
+  margin: 48% 39%;
+}
+.farol img {
+  margin-bottom: 5%;
+}
+.farol .playIcon img {
+  position: absolute;
+  margin: 26% 40%;
+}
+.night img {
+  margin-bottom: 5%;
+}
+.night .playIcon img {
+  position: absolute;
+  margin: 22% 40%;
+}
+.espaco img {
+  margin-bottom: 5%;
+}
+.espaco .playIcon img {
+  position: absolute;
+  margin: 16% 40%;
+}
+.smarthphone img {
+  margin-bottom: 5%;
+}
+.smarthphone .playIcon img {
+  position: absolute;
+  margin: 16% 42%;
+}
+.smarthphone .smarthphone-white-title {
+  color: #fff;
+  font-family: AudiTypeV03-ExtendedBold;
+  font-size: 27.86px;
+  margin-left: 27%;
+}
+.smarthphone .smarthphone-gray-title {
+  color: #808080;
+  font-family: AudiTypeV03-ExtendedBold;
+  font-size: 18.57px;
+  margin-left: 13%;
+}
+.eixo-traseiro img {
+  margin-bottom: 5%;
+}
+.eixo-traseiro .playIcon img {
+  position: absolute;
+  margin: 46% 40%;
+}
+.head-up img {
+  margin-bottom: 5%;
+}
+.head-up .playIcon img {
+  position: absolute;
+  margin: 16% 38%;
+}
+.teto-solar img {
+  margin-bottom: 7%;
+}
+.teto-solar .playIcon img {
+  position: absolute;
+  margin: 20% 38%;
+}
+.teto-solar .description-bottom p {
+  color: #fff;
+  font-size: 14px;
+  font-family: AudiTypeV03-Normal;
+  text-align: center;
+  margin-top: 9%;
+}
+.playIcon img {
+  position: absolute;
+  margin: 69% 39%;
+}
+embed {
+  display: none;
+}
+#video-lightbox {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  z-index: 10;
+  background-color: #000;
+}
+#video-lightbox .close-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 5px;
+  top: 5px;
+  z-index: 1;
+}
+#video-lightbox .video-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.bottom-footer {
+  width: 100%;
+  height: 67px;
+  background-color: #222;
+  padding-top: 32px;
+  position: fixed;
+  bottom: 0;
+}
+.bottom-footer h1 {
+  font-size: 19.89px;
+  color: #fff;
+  font-family: AudiTypeV03-ExtendedBold;
+}
+.bottom-footer p {
+  font-size: 11.94px;
+  color: #fff;
+  font-family: AudiTypeV03-Normal;
+  margin-top: 2%;
+}
+.bottom-footer .bottom-arrow img {
+  height: 12px;
+  width: 28px;
+  float: left;
+  margin: 4% 4% 5% 12%;
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .bottom-footer {
+    height: 40px;
+    padding-top: 12px;
+  }
+  .bottom-footer h1 {
+    font-size: 14px;
+  }
+  .bottom-footer p {
+    font-size: 9px;
+    margin-top: 3px;
+  }
+  .bottom-footer .bottom-arrow img {
+    margin: 3.5% 6% 5% 17%;
+  }
+}
+.logo {
+  margin: 15px 70px 18px 0;
+  float: right;
+}
+@media (max-width: 500px) {
+  .logo {
+    text-align: center;
+    margin: 20px 0;
+    float: none;
+  }
+}
+
+option[value="0650"]{
+  display: none !important;
+}
+
+option[value="4518"]{
+  display: none !important;
+}
