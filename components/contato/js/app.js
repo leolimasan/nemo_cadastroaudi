@@ -294,16 +294,6 @@
                   "data-parsley-pattern": "[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\\s]{5,65}"
                 }
               },{
-                "title": "EMPRESA*",
-                "incorrectText": "*preencha o campo empresa corretamente",
-                "attr": {
-                  "type": "text",
-                  "name": "company",
-                  "data-parsley-required": "true",
-                  "data-parsley-length": "[5, 65]",
-                  "data-parsley-pattern": "[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\\s]{5,65}"
-                }
-              },{
                 "title": "TELEFONE*",
                 "incorrectText": "*preencha o campo telefone corretamente",
                 "mask": "(00)#0000-0000",
@@ -351,16 +341,6 @@
                   "data-parsley-cpf-val":""
                 }
               }, {
-                "title": "DATA DE NASCIMENTO*",
-                "incorrectText": "*preencha o campo nascimento corretamente",
-                "mask": "00/00/0000",
-                "attr": {
-                  "type": "text",
-                  "name": "birthday",
-                  "value": "01/01/2000",
-                  "data-parsley-required": "false"
-                }
-              }, {
                 "title": "ESCOLHA UMA CONCESSIONÁRIA DE PREFERÊNCIA*",
                 "incorrectText": "*preencha o campo concessionária corretamente",
                 "placeholderTag": "",
@@ -368,7 +348,8 @@
                 "attr": {
                   "name": "seller",
                   "data-parsley-required": "true"
-               },  {
+                }
+              }, {
                 "title": "ESCOLHA UM MODELO (OPCIONAL)",
                 "incorrectText": "*preencha o campo concessionária corretamente",
                 "placeholderTag": "",
@@ -496,7 +477,7 @@
 
       this._formGroupNews2 = $('<div/>').addClass("formGroup newsletter");
       this._consentText = $('<label/>').addClass('consent-title');
-      this._consentText.text('');
+      this._consentText.text('Ao incluir seus dados e apertar o botão "enviar", você consente que a AUDI colete, compartilhe, se necessário, e armazene seus dados pessoais com a finalidade de contato para aquisição de produto, considerá-lo para participar de eventos, e eventual contato futuro. Os dados pessoais permanecerão no banco de dados pelo prazo de 05 anos, iniciados da coleta, no entanto, você poderá solicitar que seus dados sejam eliminados ou alterados, através do email cliente.audi@audi.com.br. Na hipótese de exclusão ou não autorização de coleta/tratamento, fica ciente que poderá ser inviável prosseguir com o contato');
       this._formGroupNews2.append(this._consentText);
       this._form.append(this._formGroupNews2);
 
@@ -772,6 +753,9 @@
         }, {
           container: ".formGroup.cpf",
           field: ".formGroup input[name='cpf']"
+        }, {
+          container: ".formGroup.birthday",
+          field: ".formGroup input[name='birthday']"
         }, {
           container: ".formGroup.seller",
           field: ".formGroup select[name='seller']"
