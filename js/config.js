@@ -91,8 +91,14 @@ window.CONFIG = [
         type: 'cadastro_etron',
         template: 'components/cadastro_etron/',
         idSite: 36
-    }
-    ,{
+    },
+    {
+        id: 24,
+        type: 'cadastro_evento',
+        template: 'components/cadastro_evento/',
+        idSite: 36
+    },
+    {
         id: 888,
         type: 'cadastro_vtp',
         template: 'components/cadastro_vtp/',
