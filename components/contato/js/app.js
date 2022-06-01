@@ -881,7 +881,7 @@ FormLead.prototype._repopulateDealers = function(excludeDealerId, selectSibling)
       _loading.append(this.svgLoader);
       _formSelect.parent().append(_loading);
       return $.ajax({
-        url: window.URL_VEHICLEMODELS_LIST_JSON,
+        url: window.URL_VEHICLE_LIST,
         dataType: 'json',
         error: function(jqXHR, textStatus, errorThrown) {},
         success: (function(_this) {
@@ -945,7 +945,7 @@ FormLead.prototype._repopulateDealers = function(excludeDealerId, selectSibling)
 
     FormLead.prototype._populateMaps = function() {
       return $.ajax({
-        url: window.URL_DEALER_LIST_JSON2,
+        url: window.URL_DEALER_LIST_JSON,
         dataType: 'json',
         error: (function(_this) {
           return function(jqXHR, textStatus, errorThrown) {
@@ -969,7 +969,7 @@ FormLead.prototype._repopulateDealers = function(excludeDealerId, selectSibling)
       _formSelect.children().remove();
       _formSelect.append($('<option/>'));
       $.ajax({
-        url: window.URL_DEALER_LIST_JSON2,
+        url: window.URL_DEALER_LIST_JSON,
         dataType: 'json',
         error: (function(_this) {
           return function(jqXHR, textStatus, errorThrown) {
