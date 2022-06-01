@@ -379,7 +379,6 @@
                   "class": "vehiclemodel-default"
                 }
               }
-              }
             ]
           }
         }
