@@ -341,22 +341,6 @@
                   "data-parsley-required": "true"
                 }
               }, {
-                "title": "INTERESSE EM*",
-                "incorrectText": "*preencha o campo cidade corretamente",
-                "tag": "div",
-                "background": "none",
-                "attr": {
-                  "name": "interest"
-                }
-              }, {
-                "title": "TIPO DE DOCUMENTO*",
-                "incorrectText": "*",
-                "tag": "div",
-                "background": "none",
-                "attr": {
-                  "name": "documentType"
-                }
-              }, {
                 "title": "CPF*",
                 "incorrectText": "*preencha o campo cpf corretamente",
                 "mask": "000.000.000-00",
@@ -365,17 +349,6 @@
                   "name": "cpf",
                   "data-parsley-required": "false",
                   "data-parsley-cpf-val":""
-                }
-              }, {
-                "title": "CNPJ*",
-                "incorrectText": "*preencha o campo cnpj corretamente",
-                "mask": "00.000.000/0000-00",
-                "attr": {
-                  "type": "text",
-                  "name": "cnpj",
-                  "data-parsley-required": "false",
-                  "data-parsley-pattern": "[0-9]{2}.[0-9]{3}.[0-9]{3}/[0-9]{4}-[0-9]{2}",
-                  "data-parsley-group": "cnpjGroup"
                 }
               }, {
                 "title": "DATA DE NASCIMENTO*",
@@ -395,23 +368,6 @@
                 "attr": {
                   "name": "seller",
                   "data-parsley-required": "true"
-                }
-              }, {
-                "title": "ESCOLHA MAIS UMA CONCESSIONÁRIA (OPCIONAL)",
-                "placeholderTag": "",
-                "tag": "select",
-                "attr": {
-                  "name": "seller"
-                }
-              }, {
-                "title": "ESCOLHA UM MODELO (OPCIONAL)",
-                "incorrectText": "*preencha o campo concessionária corretamente",
-                "placeholderTag": "",
-                "tag": "select",
-                "attr": {
-                  "name": "vehiclemodel",
-                  "data-parsley-required": "false",
-                  "class": "vehiclemodel-default"
                 }
               }
             ]
@@ -531,7 +487,7 @@
 
       this._formGroupNews2 = $('<div/>').addClass("formGroup newsletter");
       this._consentText = $('<label/>').addClass('consent-title');
-      this._consentText.text('Ao incluir seus dados e apertar o botão "enviar", você consente que a AUDI colete, compartilhe, se necessário, e armazene seus dados pessoais com a finalidade de contato para aquisição de produto, considerá-lo para participar de eventos, e eventual contato futuro. Os dados pessoais permanecerão no banco de dados pelo prazo de 05 anos, iniciados da coleta, no entanto, você poderá solicitar que seus dados sejam eliminados ou alterados, através do email cliente.audi@audi.com.br. Na hipótese de exclusão ou não autorização de coleta/tratamento, fica ciente que poderá ser inviável prosseguir com o contato');
+      this._consentText.text('');
       this._formGroupNews2.append(this._consentText);
       this._form.append(this._formGroupNews2);
 
@@ -807,9 +763,6 @@
         }, {
           container: ".formGroup.cpf",
           field: ".formGroup input[name='cpf']"
-        }, {
-          container: ".formGroup.birthday",
-          field: ".formGroup input[name='birthday']"
         }, {
           container: ".formGroup.seller",
           field: ".formGroup select[name='seller']"
