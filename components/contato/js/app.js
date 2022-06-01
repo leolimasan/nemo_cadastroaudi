@@ -368,7 +368,17 @@
                 "attr": {
                   "name": "seller",
                   "data-parsley-required": "true"
+               },  {
+                "title": "ESCOLHA UM MODELO (OPCIONAL)",
+                "incorrectText": "*preencha o campo concessionária corretamente",
+                "placeholderTag": "",
+                "tag": "select",
+                "attr": {
+                  "name": "vehiclemodel",
+                  "data-parsley-required": "false",
+                  "class": "vehiclemodel-default"
                 }
+              }
               }
             ]
           }
