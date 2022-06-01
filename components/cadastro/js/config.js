@@ -1,7 +1,7 @@
 
 
 var FORM_TYPE = {
-    CorporateSales: "01241000001IHZ2",
+    CorporateSales: "01241000001IHYn",
     Sales: "01241000001IHYn"
 };
 var _env = "prod"; // values : prod | dev
