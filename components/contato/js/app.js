@@ -287,16 +287,6 @@
                   "data-parsley-pattern": "[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\\s]{5,65}"
                 }
               },{
-                "title": "EMPRESA*",
-                "incorrectText": "*preencha o campo empresa corretamente",
-                "attr": {
-                  "type": "text",
-                  "name": "company",
-                  "data-parsley-required": "true",
-                  "data-parsley-length": "[5, 65]",
-                  "data-parsley-pattern": "[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\\s]{5,65}"
-                }
-              },{
                 "title": "TELEFONE*",
                 "incorrectText": "*preencha o campo telefone corretamente",
                 "mask": "(00)#0000-0000",
@@ -334,22 +324,6 @@
                   "data-parsley-required": "true"
                 }
               }, {
-                "title": "INTERESSE EM*",
-                "incorrectText": "*preencha o campo cidade corretamente",
-                "tag": "div",
-                "background": "none",
-                "attr": {
-                  "name": "interest"
-                }
-              }, {
-                "title": "TIPO DE DOCUMENTO*",
-                "incorrectText": "*",
-                "tag": "div",
-                "background": "none",
-                "attr": {
-                  "name": "documentType"
-                }
-              }, {
                 "title": "CPF*",
                 "incorrectText": "*preencha o campo cpf corretamente",
                 "mask": "000.000.000-00",
@@ -358,27 +332,6 @@
                   "name": "cpf",
                   "data-parsley-required": "false",
                   "data-parsley-cpf-val":""
-                }
-              }, {
-                "title": "CNPJ*",
-                "incorrectText": "*preencha o campo cnpj corretamente",
-                "mask": "00.000.000/0000-00",
-                "attr": {
-                  "type": "text",
-                  "name": "cnpj",
-                  "data-parsley-required": "false",
-                  "data-parsley-pattern": "[0-9]{2}.[0-9]{3}.[0-9]{3}/[0-9]{4}-[0-9]{2}",
-                  "data-parsley-group": "cnpjGroup"
-                }
-              }, {
-                "title": "DATA DE NASCIMENTO*",
-                "incorrectText": "*preencha o campo nascimento corretamente",
-                "mask": "00/00/0000",
-                "attr": {
-                  "type": "text",
-                  "name": "birthday",
-                  "value": "01/01/2000",
-                  "data-parsley-required": "false"
                 }
               }, {
                 "title": "ESCOLHA UMA CONCESSIONÁRIA DE PREFERÊNCIA*",
@@ -390,20 +343,13 @@
                   "data-parsley-required": "true"
                 }
               }, {
-                "title": "ESCOLHA MAIS UMA CONCESSIONÁRIA (OPCIONAL)",
-                "placeholderTag": "",
-                "tag": "select",
-                "attr": {
-                  "name": "seller"
-                }
-              }, {
-                "title": "ESCOLHA UM MODELO (OPCIONAL)",
+                "title": "ESCOLHA UM MODELO",
                 "incorrectText": "*preencha o campo concessionária corretamente",
                 "placeholderTag": "",
                 "tag": "select",
                 "attr": {
                   "name": "vehiclemodel",
-                  "data-parsley-required": "false",
+                  "data-parsley-required": "true",
                   "class": "vehiclemodel-default"
                 }
               }
