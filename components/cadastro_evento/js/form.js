@@ -278,7 +278,6 @@ Form = (function(_window) {
                 "00N4100000VtFGj": interestType === "Information"
                     ? ""
                     : this.findDocument(),
-                "00N4100000VtGXC": $('.birthday input').val(),
                 "phone": $('.phone input').val(),
                 "email": $('.email input').val(),
                 "optIn": $('.newsletterCheckbox').hasClass('checked') ? 1 : 0,
