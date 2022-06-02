@@ -929,29 +929,6 @@ FormLead.prototype._repopulateDealers = function(excludeDealerId, selectSibling)
     FormLead.prototype._populateVehicleModels = function() {
       var _formSelect, _loading;
       _formSelect = this.element.find('.vehiclemodel select').eq(0);
-      // added 01-02-2019
-
-      var vars = [], hash;
-      var hashes = window.location
-          .href
-          .slice(
-              window.location
-                  .href
-                  .indexOf('?') + 1
-          )
-          .split('&');
-
-      for(var i = 0; i < hashes.length; i++)
-      {
-          hash = hashes[i].split('=');
-          vars.push(hash[0]);
-          vars[hash[0]] = hash[1];
-      }
-      if (vars['car'] !== '') {
-        _formSelect.attr('disabled', true);
-      }
-      // _formSelect.attr('disabled', true);
-      // end added 01-02-2019
       _loading = $('<div/>').addClass('loading');
       _loading.append(this.svgLoader);
       _formSelect.parent().append(_loading);
