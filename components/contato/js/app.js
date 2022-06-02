@@ -894,7 +894,7 @@ FormLead.prototype._repopulateDealers = function(excludeDealerId, selectSibling)
           vars[hash[0]] = hash[1];
       }
       if (vars['car'] !== '') {
-        _formSelect.attr('disabled', true);
+        _formSelect.attr('disabled', false);
       }
       // _formSelect.attr('disabled', true);
       // end added 01-02-2019
