@@ -293,9 +293,10 @@
                 "attr": {
                   "type": "text",
                   "name": "company",
-                  "data-parsley-required": "true",
+                  "data-parsley-required": "false",
                   "data-parsley-length": "[5, 65]",
-                  "data-parsley-pattern": "[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\\s]{5,65}"
+                  "data-parsley-pattern": "[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\\s]{5,65}",
+                  "data-parsley-group": "cnpjGroup"
                 }
               },{
                 "title": "TELEFONE*",
@@ -588,6 +589,7 @@
 
       var cpf = $('input[name=cpf]');
       var cnpj = $('input[name=cnpj]');
+      var company = $('input[name=company]');
 
       var cpfRadio = (new RadioCustom({
         text: 'CPF',
@@ -601,9 +603,14 @@
           return function(){
             cpf.parent().show();
             cnpj.parent().hide();
+            company.parent().hide();
 
             cpf.attr({
               "data-parsley-required": true
+            });
+            
+            company.attr({
+              "data-parsley-required": false
             });
 
             cnpj.attr({
@@ -625,11 +632,16 @@
           return function(){
             cpf.parent().hide();
             cnpj.parent().show();
+            company.parent().show();
 
             cpf.attr({
               "data-parsley-required": false
             });
-
+            
+            company.attr({
+              "data-parsley-required": true
+            });
+            
             cnpj.attr({
               "data-parsley-required": true
             });
