@@ -288,17 +288,6 @@
                   "data-parsley-pattern": "[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\\s]{5,65}"
                 }
               },{
-                "title": "EMPRESA*",
-                "incorrectText": "*preencha o campo empresa corretamente",
-                "attr": {
-                  "type": "text",
-                  "name": "company",
-                  "data-parsley-required": "false",
-                  "data-parsley-length": "[5, 65]",
-                  "data-parsley-pattern": "[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\\s]{5,65}",
-                  "data-parsley-group": "cnpjGroup"
-                }
-              },{
                 "title": "TELEFONE*",
                 "incorrectText": "*preencha o campo telefone corretamente",
                 "mask": "(00)#0000-0000",
@@ -370,6 +359,17 @@
                   "name": "cnpj",
                   "data-parsley-required": "false",
                   "data-parsley-pattern": "[0-9]{2}.[0-9]{3}.[0-9]{3}/[0-9]{4}-[0-9]{2}",
+                  "data-parsley-group": "cnpjGroup"
+                }
+              },{
+                "title": "EMPRESA*",
+                "incorrectText": "*preencha o campo empresa corretamente",
+                "attr": {
+                  "type": "text",
+                  "name": "company",
+                  "data-parsley-required": "false",
+                  "data-parsley-length": "[5, 65]",
+                  "data-parsley-pattern": "[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\\s]{5,65}",
                   "data-parsley-group": "cnpjGroup"
                 }
               }, {
