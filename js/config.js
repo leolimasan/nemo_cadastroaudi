@@ -104,6 +104,12 @@ window.CONFIG = [
         template: 'components/cadastro_vtp/',
         idSite: 36
     },
+     {
+        id: 367,
+        type: 'cadastro-update',
+        template: 'components/cadastro-update/',
+        idSite: 36
+    },
     {
         id: 999,
         type: 'cadastro_uat',
