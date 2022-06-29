@@ -722,7 +722,7 @@ FormLead = (function() {
 this._formGroupNews = $('<div/>').addClass("formGroup newsletter");
       this._checkBox = new CheckBoxCustom({
         name: 'termos',
-        text: 'Li e concordo com o tratamento dos meus dados pessoais conforme previsto na Declaração de Privacidade para Website Audi.',
+        text: 'Ao incluir seus dados e apertar o botão "enviar", você consente que a AUDI colete, compartilhe, se necessário, e armazene seus dados pessoais com a finalidade de contato para aquisição de produto, considerá-lo para participar de eventos, e eventual contato futuro. Os dados pessoais permanecerão no banco de dados pelo prazo de 05 anos, iniciados da coleta, no entanto, você poderá solicitar que seus dados sejam eliminados ou alterados, através da página "Portal de Privacidade", item "Direitos do Titular de Dados". Na hipótese de exclusão ou não autorização de coleta/tratamento, fica ciente que poderá ser inviável prosseguir com o contato.',
         container: this._formGroupNews,
         "class": 'newsletterCheckbox',
         'type': 'checkbox',
