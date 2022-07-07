@@ -16,7 +16,13 @@
           id: 2,
           type: 'cadastro',
           idSite: 36
-        }, {
+        },
+        {
+          id: 99,
+          type: 'cadastro2',
+          idSite: 36
+        },
+        {
           id: 3,
           type: 'car-configurator',
           idSite: 37
@@ -62,7 +68,7 @@
       this._create();
     }
 
-    CheckBoxCustom.prototype._create = function() {
+     CheckBoxCustom.prototype._create = function() {
       this._checkBoxContainer = $('<div/>').addClass(this._options["class"]);
       this._externalContainer.append(this._checkBoxContainer);
       this._span = $('<span/>');
@@ -89,7 +95,6 @@
     };
     
 };
-
     CheckBoxCustom.prototype._handlerCheckbox = function(e) {
       return this._checkBoxContainer.toggleClass('checked');
     };
@@ -521,17 +526,15 @@
 
       this._formGroupNews2 = $('<div/>').addClass("formGroup newsletter");
       this._consentText = $('<label/>').addClass('consent-title');
-      this._consentText.text('');
+      this._consentText.text('Ao incluir seus dados e apertar o botão "enviar", você consente que a AUDI colete, compartilhe, se necessário, e armazene seus dados pessoais com a finalidade de contato para aquisição de produto, considerá-lo para participar de eventos, e eventual contato futuro. Os dados pessoais permanecerão no banco de dados pelo prazo de 05 anos, iniciados da coleta, no entanto, você poderá solicitar que seus dados sejam eliminados ou alterados, através do email cliente.audi@audi.com.br. Na hipótese de exclusão ou não autorização de coleta/tratamento, fica ciente que poderá ser inviável prosseguir com o contato');
       this._formGroupNews2.append(this._consentText);
       this._form.append(this._formGroupNews2);
 
       this._formGroupSalutation = $('<div/>').addClass("formGroup salutation");
       this._form.append(this._formGroupSalutation);
-
       this._salutationTitle = $('<label/>').addClass('salutation-title');
       this._salutationTitle.text('Forma de tratamento');
       this._formGroupSalutation.append(this._salutationTitle);
-
       this._radio = new RadioCustom({
         text: 'Sr.',
         value: 'Sr.',
@@ -550,21 +553,6 @@
         "class": 'radio-custom',
         checked: false
       });
-
-
-      /*
-      this._formGroupConsent = $('<div/>').addClass("formGroup consent");
-      this._form.append(this._formGroupConsent);
-
-      this._consentBox = new CheckBoxCustom({
-        text: 'Ao incluir seus dados e apertar o botão "enviar", você consente que a AUDI colete, compartilhe, se necessário, e armazene seus dados pessoais com a finalidade de contato para aquisição de produto, considerá-lo para participar de eventos, e eventual contato futuro. Os dados pessoais permanecerão no banco de dados pelo prazo de 05 anos, iniciados da coleta, no entanto, você poderá solicitar que seus dados sejam eliminados ou alterados, através deste e-mail xxx. Na hipótese de exclusão ou não autorização de coleta/tratamento, fica ciente que poderá ser inviável prosseguir com o contato',
-        container: this._formGroupConsent,
-        "class": 'consentCheckbox',
-        checked: false
-      });
-      */
-
-
       ref = this._data['fields'];
       for (i = 0, len = ref.length; i < len; i++) {
         field = ref[i];
@@ -602,7 +590,6 @@
       var cpf = $('input[name=cpf]');
       var cnpj = $('input[name=cnpj]');
       var company = $('input[name=company]');
-
 
       var cpfRadio = (new RadioCustom({
         text: 'CPF',
@@ -647,7 +634,6 @@
             cnpj.parent().show();
             company.parent().show();
 
-
             cpf.attr({
               "data-parsley-required": false
             });
@@ -655,7 +641,7 @@
             company.attr({
               "data-parsley-required": true
             });
-
+            
             cnpj.attr({
               "data-parsley-required": true
             });
@@ -950,33 +936,13 @@ FormLead.prototype._repopulateDealers = function(excludeDealerId, selectSibling)
       var _formSelect, _loading;
       _formSelect = this.element.find('.vehiclemodel select').eq(0);
       // added 01-02-2019
-
-      var vars = [], hash;
-      var hashes = window.location
-          .href
-          .slice(
-              window.location
-                  .href
-                  .indexOf('?') + 1
-          )
-          .split('&');
-
-      for(var i = 0; i < hashes.length; i++)
-      {
-          hash = hashes[i].split('=');
-          vars.push(hash[0]);
-          vars[hash[0]] = hash[1];
-      }
-      if (vars['car'] !== '') {
-        _formSelect.attr('disabled', true);
-      }
       // _formSelect.attr('disabled', true);
       // end added 01-02-2019
       _loading = $('<div/>').addClass('loading');
       _loading.append(this.svgLoader);
       _formSelect.parent().append(_loading);
       return $.ajax({
-        url: window.URL_VEHICLEMODELS_LIST_JSON,
+        url: window.URL_VEHICLE_LIST,
         dataType: 'json',
         error: function(jqXHR, textStatus, errorThrown) {},
         success: (function(_this) {
@@ -1040,7 +1006,7 @@ FormLead.prototype._repopulateDealers = function(excludeDealerId, selectSibling)
 
     FormLead.prototype._populateMaps = function() {
       return $.ajax({
-        url: window.URL_DEALER_LIST_JSON,
+        url: window.URL_DEALER_LIST_JSON2,
         dataType: 'json',
         error: (function(_this) {
           return function(jqXHR, textStatus, errorThrown) {
@@ -1064,7 +1030,7 @@ FormLead.prototype._repopulateDealers = function(excludeDealerId, selectSibling)
       _formSelect.children().remove();
       _formSelect.append($('<option/>'));
       $.ajax({
-        url: window.URL_DEALER_LIST_JSON,
+        url: window.URL_DEALER_LIST_JSON2,
         dataType: 'json',
         error: (function(_this) {
           return function(jqXHR, textStatus, errorThrown) {
