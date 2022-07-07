@@ -221,7 +221,6 @@ Form = (function(_window) {
         }else{
             $(".term-policy-error").remove();
         }
-        
         var cpfvalid = cpfValid();
 
         if (!this.form.parsley().validate()) {
@@ -276,6 +275,7 @@ Form = (function(_window) {
                 "00N4100000VtFGj": interestType === "Information"
                     ? ""
                     : this.findDocument(),
+                "00N4100000VtGXC": $('.birthday input').val(),
                 "phone": $('.phone input').val(),
                 "email": $('.email input').val(),
                 "optIn": $('.newsletterCheckbox').hasClass('checked') ? 1 : 0,
