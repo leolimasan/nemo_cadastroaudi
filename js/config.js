@@ -118,8 +118,8 @@ window.CONFIG = [
     },
     {
         id: 202201,
-        type: '22cadastro_corporate',
-        template: 'components/22cadastro_corporate/',
+        type: '22_cadastro_corporate',
+        template: 'components/22_cadastro_corporate/',
         idSite: 36
     }
 ];
