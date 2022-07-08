@@ -942,7 +942,7 @@ FormLead.prototype._repopulateDealers = function(excludeDealerId, selectSibling)
       _loading.append(this.svgLoader);
       _formSelect.parent().append(_loading);
       return $.ajax({
-        url: window.URL_VEHICLE_LISTLUX,
+        url: window.URL_VEHICLE_LISTCORP,
         dataType: 'json',
         error: function(jqXHR, textStatus, errorThrown) {},
         success: (function(_this) {
