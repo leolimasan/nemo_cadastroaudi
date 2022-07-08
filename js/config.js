@@ -135,6 +135,7 @@ window.URL_VEHICLEMODELS_LIST_JSON  = window.URL_PROJECT + "/vehiclemodel/list";
 window.URL_VEHICLE_LIST 			= window.URL_PROJECT + "/Vehiclemodel/list";
 window.URL_VEHICLE_LIST2 			= window.URL_PROJECT + "/Vehiclemodel/list2";
 window.URL_VEHICLE_LISTLUX 			= window.URL_PROJECT + "/Vehiclemodel/list3";
+window.URL_VEHICLE_LISTCORP 			= window.URL_PROJECT + "/Vehiclemodel/list4";
 
 window.URL_DEALER_LIST_JSON         = window.URL_PROJECT + "/dealer/listWithStates";
 window.URL_DEALER_LIST_JSON2        = window.URL_PROJECT + "/dealer/listWithStates2";
