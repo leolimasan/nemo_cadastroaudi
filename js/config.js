@@ -116,6 +116,12 @@ window.CONFIG = [
         template: 'components/cadastro_uat/',
         idSite: 36
     },
+    {
+        id: 202201,
+        type: '22cadastro_corporate',
+        template: 'components/22cadastro_corporate/',
+        idSite: 36
+    }
 ];
 
 window.URL_CONTENT_BASE 			= "https://audileads-new.herokuapp.com";
