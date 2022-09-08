@@ -290,7 +290,7 @@
               },{
                 "title": "TELEFONE*",
                 "incorrectText": "*preencha o campo telefone corretamente",
-                "mask": "(00)#0000-0000",
+                "mask": "+00 (00) #0000-0000",
                 "attr": {
                   "type": "text",
                   "name": "phone",
