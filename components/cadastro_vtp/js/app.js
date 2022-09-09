@@ -299,12 +299,12 @@
               },{
                 "title": "TELEFONE*",
                 "incorrectText": "*preencha o campo telefone corretamente",
-                "mask": "(00)#0000-0000",
+                "mask": "+000(00)#0000-0000",
                 "attr": {
                   "type": "text",
                   "name": "phone",
                   "data-parsley-required": "true",
-                  "data-parsley-pattern": "^(?:(?:\\+|00)?(55)\\s?)?(?:\\(?([1-9][0-9])\\)?\\s?)?(?:((?:9\\d|[2-9])\\d{4})\\-?(\\d{3,4}))$"
+                  "data-parsley-pattern": "^((?:\\+)[0-9]{2,3})\\s?(?:\\(?([1-9][0-9])\\)?\s?)?(?:((?:9\\d|[2-9])\\d{4})\\-?(\\d{3,4}))$"
                 }
               }, {
                 "title": "E-MAIL*",
