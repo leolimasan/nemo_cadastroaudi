@@ -287,14 +287,15 @@ Form = (function() {
                 "data-parsley-pattern": "[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\\s]{5,65}"
               }
             },{
-              "title": "TELEFONE*",
-              "incorrectText": "*preencha o campo telefone corretamente",
-              "mask": "(00)0000-000#0",
-              "attr": {
-                "type": "text",
-                "name": "phone",
-                "data-parsley-required": "true"
-              }
+                "title": "TELEFONE*",
+                "incorrectText": "*preencha o campo telefone corretamente",
+                "mask": "+000(00)#0000-0000",
+                "attr": {
+                  "type": "text",
+                  "name": "phone",
+                  "data-parsley-required": "true",
+                  "data-parsley-pattern": "^((?:\\+)[0-9]{2,3})\\s?(?:\\(?([1-9][0-9])\\)?\s?)?(?:((?:9\\d|[2-9])\\d{4})\\-?(\\d{3,4}))$"
+                }
             }, {
               "title": "E-MAIL*",
               "incorrectText": "*preencha o campo e-mail corretamente",
