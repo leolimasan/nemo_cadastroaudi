@@ -263,6 +263,9 @@ table {
 .formLead .formGroup.birthday {
   display: none;
 }
+
+.formGroup.company {display:none;}
+
 .formLead .formGroup.newsletter {
   color: #000;
 }
