@@ -368,7 +368,7 @@
                   "name": "company",
                   "data-parsley-required": "false",
                   "data-parsley-length": "[5, 65]",
-                  "data-parsley-pattern": "[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\\s]{5,65}"
+                  "data-parsley-pattern": "[A-Z-a-zzáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\\s]{5,65}",
                   "data-parsley-group": "cnpjGroup"
                 }
               }, {
