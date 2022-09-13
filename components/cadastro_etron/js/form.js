@@ -129,9 +129,7 @@ Form = (function(_window) {
         //dentro do app.js existe um evento que sobrepõe o .hide deste parent
         //com o remove, não será necessário criar nenhuma gambiarra dentro do compilado
         //para controlar o estado de apresentação deste componente.
-        this.documentType
-            .parent()
-            .remove();
+
     };
 
     Form.prototype.findDocument = function() {
