@@ -722,7 +722,7 @@
               "data-parsley-required": "false"
             });
 
-            $('.seller, .vehiclemodel, .cpf, .birthday, .cnpj').hide();
+            $('.seller, .vehiclemodel, .cpf, .birthday, .cnpj, .company').hide();
             _this._formGroupDocumentType.parent().hide();
 
             $('.seller').find('select').val('');
@@ -732,6 +732,10 @@
             }).val('');
 
             $('.cnpj').find('input').attr({
+              "data-parsley-required": false
+            }).val('');
+            
+            $('.company').find('input').attr({
               "data-parsley-required": false
             }).val('');
 
