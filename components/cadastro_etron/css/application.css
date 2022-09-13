@@ -260,9 +260,12 @@ table {
 }
 .formLead .formGroup.seller,
 .formLead .formGroup.cnpj,
-.formLead .formGroup.birthday, .formLead .formGroup.company  {
+.formLead .formGroup.birthday  {
   display: none;
 }
+
+.formGroup.company {display:none;}
+
 .formLead .formGroup.newsletter {
   color: #000;
 }
